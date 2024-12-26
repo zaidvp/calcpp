@@ -45,7 +45,7 @@ int main()
         cin >> scelta;
     }
     
-    if (scelta > 1 && scelta < 4) {
+    if (scelta >= 1 && scelta <= 4) {
         // inserimento dei 2 numeri
         cout << "Inserire il primo numero" << endl;
         cin >> a;
