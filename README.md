@@ -1,4 +1,4 @@
-# CalcolatriceCPP
+# calcpp
 A simple calculator in C++ for basic operations.  
 Don't hate, I'm just trying to learn! 😄
 
