@@ -7,6 +7,7 @@ Don't hate, I'm just trying to learn! 😄
 - Subtraction
 - Multiplication
 - Division
+- Power
 
 ## How to use
 1. Compile the `main.cpp` file.
