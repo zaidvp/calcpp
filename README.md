@@ -1,2 +1,18 @@
-# calcolatricecpp
-dont hate im just trying to learn
+# CalcolatriceCPP
+A simple calculator in C++ for basic operations.  
+Don't hate, I'm just trying to learn! 😄
+
+## Features
+- Addition
+- Subtraction
+- Multiplication
+- Division
+
+## How to use
+1. Compile the `main.cpp` file.
+2. Run the program and follow the instructions.
+
+---
+
+## Feedback
+Any suggestions are welcome! ✨
