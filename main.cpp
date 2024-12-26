@@ -22,45 +22,57 @@ float divisione(float a, float b) {
     return a/b;
 }
 
+int potenza(int a, int esponente) {
+    int risultato=1;
+    for (int i=0;i<esponente;i++) {
+        risultato *= a;
+    }
+    return risultato;
+}
+
 int main()
 {
     // dichiarazione variabili
-    int scelta;
+    int scelta, esponente=0;
     float a,b,risultato;
     
     cout << "Salve, selezionare il tipo di operazione che si desidera fare." << endl;
-    cout << "1 per l'addizione" << endl << "2 per la sottrazione" << endl << "3 per la moltiplicazione" << endl << "4 per la divisione" << endl;
+    cout << "1 per l'addizione" << endl << "2 per la sottrazione" << endl << "3 per la moltiplicazione" << endl << "4 per la divisione" << endl << "5 per il calcolo di una potenza" << endl;
     cin >> scelta;
     // controllo scelta valida
-    while (scelta < 1 || scelta > 4) {
-        cout << "scelta non valida, riprovare" << endl;
+    while (scelta < 1 || scelta > 5) {
+        cout << "Scelta non valida, riprovare" << endl;
         cin >> scelta;
     }
-    // inserimento dei 2 numeri
-    cout << "Inserire il primo numero" << endl;
-    cin >> a;
-    cout << endl;
     
-    cout << "inserire il secondo numero" << endl;
-    cin >>b;
-    cout << endl;
+    if (scelta > 1 && scelta < 4) {
+        // inserimento dei 2 numeri
+        cout << "Inserire il primo numero" << endl;
+        cin >> a;
+        cout << endl;
+        
+        cout << "inserire il secondo numero" << endl;
+        cin >>b;
+        cout << endl;
+    } 
+
 
    switch (scelta) {
         
         case 1: 
-        cout << "Scelta selezinata: Somma" << endl;
+        cout << "Scelta selezionata: Somma" << endl;
         cout << endl;
         risultato = somma(a,b);
         break;
         
         case 2: 
-        cout << "Scelta selezinata: Sottrazione3" << endl;
+        cout << "Scelta selezionata: Sottrazione3" << endl;
         cout << endl;
         risultato = sottrazione(a,b);
         break;
         
         case 3:
-        cout << "Scelta selezinata: Moltiplicazione" << endl;
+        cout << "Scelta selezionata: Moltiplicazione" << endl;
         cout << endl;
         risultato = moltiplicazione(a,b);
         break;
@@ -70,16 +82,20 @@ int main()
             cout << "Impossibile dividere per zero." << endl;
             break;
         } 
-        cout << "Scelta selezinata: Divisione" << endl;
+        cout << "Scelta selezionata: Divisione" << endl;
         cout << endl;
         risultato = divisione(a,b);
         break;
-
+        
+        case 5: 
+        cout << "Specifica il numero" << endl;
+        cin >> a;
+        cout << "Specifica l'esponente della potenza" << endl;
+        cin >> esponente;
+        risultato = potenza(a,esponente);
+        break;
    }
 
     cout << "Il risultato e' uguale a: " << risultato << endl;
-    if (scelta==4) {
-        cout << "Nota: Se il risultato è 0 quando non lo deve essere, " << endl << "significa che c'è stato un errore nella divisone (hai provato a dividere per 0)"<< endl;
-    }
     return 0;
 }
